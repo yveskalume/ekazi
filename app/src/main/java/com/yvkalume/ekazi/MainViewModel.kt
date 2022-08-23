@@ -1,11 +1,11 @@
-package com.larevalo.jobfinder
+package com.yvkalume.ekazi
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.larevalo.jobfinder.model.Job
+import com.yvkalume.ekazi.model.Job
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {

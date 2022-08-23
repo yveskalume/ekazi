@@ -1,4 +1,4 @@
-package com.larevalo.jobfinder.utils
+package com.yvkalume.ekazi.utils
 
 import android.content.Context
 

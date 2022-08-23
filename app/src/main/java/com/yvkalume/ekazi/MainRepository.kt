@@ -1,10 +1,10 @@
-package com.larevalo.jobfinder
+package com.yvkalume.ekazi
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.larevalo.jobfinder.model.Job
-import com.larevalo.jobfinder.utils.getJSONFile
+import com.yvkalume.ekazi.model.Job
+import com.yvkalume.ekazi.utils.getJSONFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

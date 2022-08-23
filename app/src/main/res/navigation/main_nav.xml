@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.larevalo.jobfinder.HomeFragment"
+        android:name="com.yvkalume.ekazi.HomeFragment"
         android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_jobDetailModalFragment"
@@ -14,13 +14,13 @@
     </fragment>
     <dialog
         android:id="@+id/jobDetailModalFragment"
-        android:name="com.larevalo.jobfinder.JobDetailModalFragment"
+        android:name="com.yvkalume.ekazi.JobDetailModalFragment"
         android:label="JobDetailModalFragment">
         <action
             android:id="@+id/action_jobDetailModalFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <argument
             android:name="job"
-            app:argType="com.larevalo.jobfinder.model.Job" />
+            app:argType="com.yvkalume.ekazi.model.Job" />
     </dialog>
 </navigation>

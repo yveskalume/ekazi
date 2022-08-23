@@ -1,19 +1,21 @@
-package com.larevalo.jobfinder
+package com.yvkalume.ekazi
 
 import android.app.Dialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
-import androidx.core.view.ViewCompat
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.larevalo.jobfinder.databinding.FragmentJobDetailModalBinding
-import com.larevalo.jobfinder.model.Job
-import com.larevalo.jobfinder.utils.convertStringToDrawableResource
+import com.yvkalume.ekazi.databinding.FragmentJobDetailModalBinding
+import com.yvkalume.ekazi.model.Job
+import com.yvkalume.ekazi.utils.convertStringToDrawableResource
+
 
 private const val MODAL_HEIGHT_PERCENTAGE = 85
 private const val MODAL_CONTENT_HEIGHT_PERCENTAGE = 75
@@ -42,7 +44,9 @@ class JobDetailModalFragment : BottomSheetDialogFragment() {
         binding = FragmentJobDetailModalBinding.inflate(inflater)
         job = args.job
 
-        binding.detailContentScrollview.layoutParams.height = getModalHeight(MODAL_CONTENT_HEIGHT_PERCENTAGE)
+        binding.detailContentScrollview.layoutParams.height = getModalHeight(
+            MODAL_CONTENT_HEIGHT_PERCENTAGE
+        )
         bottomSheetBehavior = BottomSheetBehavior.from(binding.jobDetailBottomSheet)
 
         setBottomSheetVisibility(true)
@@ -60,6 +64,17 @@ class JobDetailModalFragment : BottomSheetDialogFragment() {
         binding.detailCompanySalary.text = requireContext().getString(R.string.format_job_salary, job.salary, job.salaryCurrency)
         binding.detailCompanyWorkingHours.text = job.workingHours.toString()
         binding.detailDescription.text = job.description
+        binding.detailSubmitApplicationBtn.setOnClickListener {
+            var url = job.url
+            if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                url = "http://$url";
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(browserIntent)
+            } else {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(browserIntent)
+            }
+        }
     }
 
     private fun getModalHeight(percentage: Int): Int {

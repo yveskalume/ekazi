@@ -1,4 +1,4 @@
-package com.larevalo.jobfinder.model
+package com.yvkalume.ekazi.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -28,6 +28,8 @@ data class Job(
     val description: String = "",
     @SerializedName("companyLogo")
     val companyLogo: String? = DEFAULT_COMPANY_LOGO,
+    @SerializedName("url")
+    val url: String = ""
 ) : Parcelable {
     enum class WorkingHours {
         FLEXIBLE, PART_TIME

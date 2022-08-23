@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2556179775280899" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/fragment_job_detail_modal.xml" value="0.21969988457098885" />
+        <entry key="app/src/main/res/layout/home_header.xml" value="0.21666666666666667" />
         <entry key="app/src/main/res/layout/job_item.xml" value="0.4237695078031212" />
         <entry key="app/src/main/res/layout/job_modal_detail.xml" value="0.29739583333333336" />
       </map>

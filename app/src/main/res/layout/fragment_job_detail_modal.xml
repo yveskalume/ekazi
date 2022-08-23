@@ -250,32 +250,21 @@ Architecting, building, and maintaining web applications
 Note the 3-years total of specialized software engineering experience may have been gained through education and full-time work experience, additional training, coursework, research, or similar (OR some combination of these). The years of specialized experience are not necessarily in addition to the years of Education &amp; full-time work experience indicated." />
 
 
+                        <Button
+                            android:id="@+id/detail_submit_application_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginHorizontal="32dp"
+                            android:layout_marginTop="16sp"
+                            android:background="@drawable/shape_primary_button"
+                            android:text="@string/detail_submit_application_btn"
+                            android:layout_below="@id/detail_description"
+                            android:textColor="@color/white" />
                     </RelativeLayout>
 
                 </LinearLayout>
 
             </ScrollView>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_below="@id/detail_content_scrollview"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="top"
-                android:background="?android:background">
-
-                <Button
-                    android:id="@+id/detail_submit_application_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginHorizontal="32dp"
-                    android:layout_marginTop="16sp"
-                    android:background="@drawable/shape_primary_button"
-                    android:text="@string/detail_submit_application_btn"
-                    android:textColor="@color/white" />
-
-            </RelativeLayout>
 
         </RelativeLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

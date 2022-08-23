@@ -1,4 +1,4 @@
-package com.larevalo.jobfinder
+package com.yvkalume.ekazi
 
 import org.junit.Test
 

@@ -1,14 +1,12 @@
-package com.larevalo.jobfinder
+package com.yvkalume.ekazi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.larevalo.jobfinder.databinding.ActivityMainBinding
-import com.larevalo.jobfinder.model.Job
+import com.yvkalume.ekazi.R
+import com.yvkalume.ekazi.databinding.ActivityMainBinding
+import com.yvkalume.ekazi.model.Job
 
 class MainActivity : AppCompatActivity(), HomeFragment.JobSelectListener {
 
