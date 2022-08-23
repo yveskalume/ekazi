@@ -1,35 +1,36 @@
 package com.yvkalume.ekazi
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
-import com.yvkalume.ekazi.R
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.platform.ViewCompositionStrategy
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.yvkalume.ekazi.databinding.ActivityMainBinding
-import com.yvkalume.ekazi.model.Job
+import com.yvkalume.ekazi.screens.HomeScreen
 
-class MainActivity : AppCompatActivity(), HomeFragment.JobSelectListener {
+class MainActivity : AppCompatActivity() {
 
-    private lateinit var navController: NavController
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container_nav)!!
-        navController = navHostFragment.findNavController()
-    }
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
-
-    override fun onJobSelected(job: Job) {
-        navController.navigate(
-            HomeFragmentDirections.actionHomeFragmentToJobDetailModalFragment(
-                job
-            )
-        )
+        binding.composeView.apply {
+            setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+            setContent {
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = "home") {
+                    composable(route = "home") {
+                        HomeScreen(viewModel = viewModel)
+                    }
+                }
+            }
+        }
     }
 }
