@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.yvkalume.ekazi.databinding.ActivityMainBinding
 import com.yvkalume.ekazi.screens.HomeScreen
+import com.yvkalume.ekazi.screens.LoginScreen
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "home") {
+                NavHost(navController = navController, startDestination = "login") {
+                    composable(route = "login") {
+                        LoginScreen(navController = navController)
+                    }
                     composable(route = "home") {
                         HomeScreen(viewModel = viewModel)
                     }
