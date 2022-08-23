@@ -1,6 +1,7 @@
 # Ekazi
 
 This is a fork of [Job Finder UI - Android (Kotlin) Application](https://github.com/arevalu/android-job-finder-ui) For School presentation purpose.
+
 I tryied to add some small features, correct some issues, remove some stuffs like Recyclerview and use Jetpack Compose instead.
 
 ## :iphone: Screenshots
