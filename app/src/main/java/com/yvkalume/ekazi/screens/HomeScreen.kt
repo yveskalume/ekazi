@@ -51,6 +51,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidViewBinding
+import coil.compose.AsyncImage
+import coil.load
 import com.yvkalume.ekazi.MainActivity
 import com.yvkalume.ekazi.MainViewModel
 import com.yvkalume.ekazi.R
@@ -98,8 +100,8 @@ fun HomeScreen(viewModel: MainViewModel) {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    Image(
-                        painter = painterResource(id = selectedJob?.companyLogo.toDrawable(context)),
+                    AsyncImage(
+                        model = selectedJob?.companyLogo.toString(),
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.size(80.dp),
                         contentDescription = null
@@ -239,9 +241,7 @@ fun HomeScreen(viewModel: MainViewModel) {
                                 job.salaryCurrency
                             )
                         jobItemLocation.text = job.location
-                        jobItemLogo.setImageResource(
-                            job.companyLogo.toDrawable(context)
-                        )
+                        jobItemLogo.load(job.companyLogo)
                     }
                 }
             })

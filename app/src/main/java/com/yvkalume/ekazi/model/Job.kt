@@ -32,6 +32,6 @@ data class Job(
     val url: String = ""
 ) : Parcelable {
     enum class WorkingHours {
-        FLEXIBLE, PART_TIME
+        FLEXIBLE,FULLTIME, PART_TIME
     }
 }

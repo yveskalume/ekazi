@@ -7,21 +7,21 @@
     <string name="content_description_image_profile">Profile image</string>
     <string name="content_description_logo_image">Logo image</string>
     <string name="content_description_icon_location">Icon location</string>
-    <string name="text_heading_line">Where are you</string>
-    <string name="text_heading_sub_line">looking for a job?</string>
-    <string name="text_search_placeholder">Search for a location</string>
-    <string name="main_text_list_title">Jobs <b>for your filters</b></string>
+    <string name="text_heading_line">Trouvez du travail</string>
+    <string name="text_heading_sub_line">en ligne</string>
+    <string name="text_search_placeholder">Recherche</string>
+    <string name="main_text_list_title">Liste des opportunités</string>
 
     <!-- layout/fragment_job_detail_modal -->
     <string name="content_description_modal_icon">Modal icon</string>
     <string name="content_description_company_logo">Company logo</string>
-    <string name="detail_label_company">Company</string>
-    <string name="detail_label_salary">Salary / Month</string>
-    <string name="detail_label_working_hours">Working hours</string>
+    <string name="detail_label_company">Entreprise</string>
+    <string name="detail_label_salary">Salaire / Mois</string>
+    <string name="detail_label_working_hours">Heures de travail</string>
     <string name="detail_label_description">Description</string>
 
     <!-- JobAdapter -->
     <string name="format_job_salary">$ %1$s %2$s</string>
-    <string name="detail_submit_application_btn">Submit an application</string>
+    <string name="detail_submit_application_btn">Vistiter le site</string>
 
 </resources>
